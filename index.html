@@ -126,7 +126,7 @@
           <div class="row">
             <h1 class="text-title">Best Seller</h1>
           </div>
-          <div class="row my-2 card-slider mb-5 mb-sm-0">
+          <div class="row my-2 card-slider mb-5 mb-sm-0 mb-md-5">
             <div class="col-md-3">
               <div class="card border-0">
                 <img
@@ -146,48 +146,48 @@
             <div class="col-md-3">
               <div class="card border-0">
                 <img
-                  src="./assets/images/shoes.png"
+                  src="./assets/images/shoes1.png"
                   class="card-img-top"
                   alt="..."
                 />
                 <div class="card-body">
-                  <span class="text-small">Nike</span>
+                  <span class="text-small">Adidas</span>
                   <h3 class="text-body" style="color: #060017 !important">
-                    Air Force 1 Low Retro White Chocolate
+                    Forum 84 Low Off White
                   </h3>
-                  <h4 class="text-body">Rp. 2,149,000</h4>
+                  <h4 class="text-body">Rp. 1,700,000</h4>
                 </div>
               </div>
             </div>
             <div class="col-md-3">
               <div class="card border-0">
                 <img
-                  src="./assets/images/shoes.png"
+                  src="./assets/images/shoes2.png"
                   class="card-img-top"
                   alt="..."
                 />
                 <div class="card-body">
                   <span class="text-small">Nike</span>
                   <h3 class="text-body" style="color: #060017 !important">
-                    Air Force 1 Low Retro White Chocolate
+                    Jordan 1 Low Bred Toe
                   </h3>
-                  <h4 class="text-body">Rp. 2,149,000</h4>
+                  <h4 class="text-body">Rp. 2,213,000</h4>
                 </div>
               </div>
             </div>
             <div class="col-md-3">
               <div class="card border-0">
                 <img
-                  src="./assets/images/shoes.png"
+                  src="./assets/images/shoes3.png"
                   class="card-img-top"
                   alt="..."
                 />
                 <div class="card-body">
-                  <span class="text-small">Nike</span>
+                  <span class="text-small">Converse</span>
                   <h3 class="text-body" style="color: #060017 !important">
-                    Air Force 1 Low Retro White Chocolate
+                    Chuck Taylor All-Star 70s Hi
                   </h3>
-                  <h4 class="text-body">Rp. 2,149,000</h4>
+                  <h4 class="text-body">Rp. 1,700,000</h4>
                 </div>
               </div>
             </div>
@@ -237,7 +237,7 @@
         <div class="container">
           <div class="row">
             <h1 class="text-title mt-5">Popular Brands</h1>
-            <div class="col-md-4">
+            <div class="col-8 col-md-4">
               <img
                 src="assets/images/series_image_left.png"
                 alt=""
@@ -426,14 +426,22 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script type="text/javascript">
-      if ($(window).width() <= 768) {
-        console.log("masuk");
+      if ($(window).width() <= 1024) {
         $(".card-slider").slick({
           infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 2,
           arrows: false,
           dots: true,
+          responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
         });
       }
     </script>
@@ -453,9 +461,7 @@
       });
 
       function changeImage(brand) {
-        console.log("masuk 1");
         $(".series-image > img").fadeOut(500, function () {
-          console.log("masuk");
           if (brand === "Adidas") {
             $(this).attr("src", "/assets/images/series_image_right1.png");
             $(this).fadeIn(500);

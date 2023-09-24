@@ -96,6 +96,16 @@
   border: 1px solid #dbdade;
 }
 
+/* the slides */
+.slick-slide {
+  margin: 0 27px;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -27px;
+}
+
 .custom-input {
   border: 0;
 }
@@ -114,7 +124,7 @@
   }
 
   .card-slider {
-    height: 70vh;
+    height: 50vh;
   }
 
   .collection-caption-woman {
